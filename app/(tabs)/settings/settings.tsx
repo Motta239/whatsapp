@@ -8,22 +8,21 @@ import { useColorScheme } from '~/hooks/useColorScheme';
 
 export const Settings = ({
   settings,
-  sectionBackground,
 }: {
-  settings: {
+  settings: Array<{
     title: string;
-    data: {
+    data: Array<{
       id: string;
       name: string;
       icon: string;
       backgroundColor: string;
-    };
+    }>;
     sectionBackground: string;
-  };
+  }>;
 }) => (
   <>
-    {settings.map((section: any) => (
-      <View key={section.title} style={tw`m-3 bg-[${sectionBackground}] rounded-xl `}>
+    {settings.map((section) => (
+      <View key={section.title} style={tw`m-3 rounded-xl `}>
         <FlatList
           scrollEnabled={false}
           data={section.data}

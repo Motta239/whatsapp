@@ -39,7 +39,7 @@ const channels = [
     id: 3,
     name: 'Real Madrid C.F.',
     description:
-      'Comunicado Oficial: Mundial de Clubes  Comunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: MundComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de Clubesial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de Clubes',
+      'Comunicado Oficial: Mundial de Clubes Comunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: MundComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de Clubesial de ClubesComunicado Oficial: Mundial de ClubesComunicado Oficial: Mundial de Clubes',
     time: 'Monday',
     image: 'https://picsum.photos/300/300',
     badgeCount: 89,
@@ -239,85 +239,85 @@ export default function Updates() {
               <Ionicons name="ellipsis-horizontal-circle" size={24} color={textColor} />
             </TouchableOpacity>
           ),
+          headerRight: () => <ThemeToggle />,
           headerSearchBarOptions: {
             placeholder: 'Search',
           },
         }}
       />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={tw`  `}>
-        <View style={tw`  `}>
-          <View style={tw` mb-4 flex-row items-center justify-between `}>
-            <Text style={tw`  text-lg font-bold`}>Status</Text>
-            <View style={tw` flex-row items-center gap-2 `}>
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <View>
+          <View style={tw`mb-4 flex-row items-center justify-between `}>
+            <Text style={tw`text-lg font-bold`}>Status</Text>
+            <View style={tw`flex-row items-center gap-2 `}>
               <TouchableOpacity
-                style={tw` h-8  w-8 items-center justify-center rounded-full   bg-gray-300 bg-opacity-20 `}
+                style={tw`h-8 w-8 items-center justify-center rounded-full bg-gray-300 bg-opacity-20 `}
                 onPress={() => {}}>
                 <Ionicons name="camera" size={23} color={textColor} />
               </TouchableOpacity>
               <TouchableOpacity
-                style={tw` h-8  w-8 items-center justify-center rounded-full   bg-gray-300 bg-opacity-20 `}
+                style={tw`rounded-fullbg-gray-300 h-8 w-8 items-center justify-center bg-opacity-20 `}
                 onPress={() => {}}>
                 <Ionicons name="pencil" size={20} color={textColor} />
               </TouchableOpacity>
             </View>
           </View>
           {statuses.map((status) => (
-            <View key={status.id} style={tw` mb-4 flex-row items-center gap-3 `}>
-              <View style={tw` relative p-1 `}>
-                <Image source={{ uri: status.image }} style={tw` h-12 w-12 rounded-full `} />
+            <View key={status.id} style={tw`mb-4 flex-row items-center gap-3 `}>
+              <View style={tw`relative p-1 `}>
+                <Image source={{ uri: status.image }} style={tw`h-12 w-12 rounded-full `} />
                 {status.isOwnStatus && (
-                  <View style={tw` absolute right-0 top-0 h-2 w-2 rounded-full bg-red-500 `} />
+                  <View style={tw`absolute right-0 top-0 h-2 w-2 rounded-full bg-red-500 `} />
                 )}
                 <View
-                  style={tw` absolute bottom-0 right-0 h-5 w-5 items-center justify-center rounded-full`}>
+                  style={tw`absolute bottom-0 right-0 h-5 w-5 items-center justify-center rounded-full`}>
                   <Ionicons name="add-circle" size={20} color="green" />
                 </View>
               </View>
               <View>
-                <Text style={tw`  font-bold`}>{status.name}</Text>
-                <Text style={tw`  font-semibold`}>{status.description}</Text>
+                <Text style={tw`font-bold`}>{status.name}</Text>
+                <Text style={tw`font-semibold`}>{status.description}</Text>
               </View>
             </View>
           ))}
-          <View style={tw` mb-4 flex-row items-center justify-between `}>
-            <Text style={tw`  text-lg font-bold`}>Channels</Text>
+          <View style={tw`mb-4 flex-row items-center justify-between `}>
+            <Text style={tw`text-lg font-bold`}>Channels</Text>
             <Ionicons name="add-circle-outline" size={24} color="white" />
           </View>
 
           <FlatList
-            contentContainerStyle={tw`   gap-4`}
+            contentContainerStyle={tw`gap-4`}
             data={channels}
             scrollEnabled={false}
+            ItemSeparatorComponent={() => <View style={tw` bg-gray-200  `} />}
             renderItem={({ item }) => (
               <TouchableOpacity
                 activeOpacity={0.8}
                 key={item.id}
-                style={tw` h-15 flex-row items-center  `}>
-                <View style={tw`  p-1 `}>
-                  <Image source={{ uri: item.image }} style={tw` h-15 w-15 rounded-full `} />
+                style={tw`h-15 flex-row items-center gap-2 `}>
+                <View style={tw`  `}>
+                  <Image source={{ uri: item.image }} style={tw`h-15 w-15 rounded-full `} />
                 </View>
-                <View style={tw`flex-1 justify-center  `}>
-                  <Text style={tw`  font-bold`}>{item.name}</Text>
-                  <View style={tw` h-10   `}>
-                    <Text style={tw`  `}>
+                <View style={tw`flex-1 justify-center `}>
+                  <Text style={tw`font-bold`}>{item.name}</Text>
+                  <View style={tw`h-10`}>
+                    <Text style={tw``}>
                       {item.name === 'חדשות 13'
                         ? item.description.slice(0, 10) + '...'
                         : item.description}
                     </Text>
                   </View>
                 </View>
-                <View style={tw` items-end  justify-between   `}>
-                  <Text style={tw`  text-green-600 `}>{item.time}</Text>
+                <View style={tw`h-15 items-end justify-between  pb-1`}>
+                  <Text style={tw`text-green-600 `}>{item.time}</Text>
                   <View
-                    style={tw` flex h-6 w-6 items-center justify-center rounded-full  bg-green-600`}>
-                    <Text style={tw`  text-xs text-white`}>{item.badgeCount}</Text>
+                    style={tw`flex h-6 w-6 items-center justify-center rounded-full bg-green-600`}>
+                    <Text style={tw`text-xs text-white`}>{item.badgeCount}</Text>
                   </View>
                 </View>
               </TouchableOpacity>
             )}
           />
-          <Text style={tw` mb-4  text-lg font-bold`}>Updates Screen</Text>
-          <ThemeToggle />
         </View>
       </ScrollView>
     </>

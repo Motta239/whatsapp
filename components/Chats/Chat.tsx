@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { FlatList, TouchableOpacity, Alert } from 'react-native';
 import tw from 'twrnc';
 
 import { Stack } from 'expo-router';
@@ -48,6 +48,26 @@ const ChatList: React.FC = () => {
       setFilteredChats(null);
     }
   }, [searchQuery, chats]);
+
+  useEffect(() => {
+    if (error) {
+      Alert.alert(
+        'Network Error',
+        'No network is present. Trying to reload the page.',
+        [
+          {
+            text: 'Retry',
+            onPress: () => {
+              // Logic to re-mount the component
+              setFilteredChats(null);
+              setSearchQuery('');
+            },
+          },
+        ],
+        { cancelable: false }
+      );
+    }
+  }, [error]);
 
   const renderItem = ({ item }: { item: ChatProps }) => (
     <ChatListItem

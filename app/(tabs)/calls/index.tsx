@@ -160,16 +160,21 @@ const Page = () => {
               </Text>
             </View>
           </View>
+
+          <Text style={tw`text-[${textColor}] px-6 text-lg font-bold`}>Recents</Text>
           <FlatList
             data={filteredItems}
-            ListHeaderComponent={() => (
-              <View>
-                <Text style={tw`text-[${textColor}] p-2 text-lg font-bold`}>Recents</Text>
-              </View>
-            )}
             style={tw`m-4 rounded-2xl`}
             ItemSeparatorComponent={() => (
               <View style={tw`h-[0.5px] bg-[${Colors.gray}] opacity-10`} />
+            )}
+            ListEmptyComponent={() => (
+              <View
+                style={tw` h-45 m-4 flex-row items-center justify-center  gap-2  bg-[${background}] rounded-2xl px-3 py-2 shadow-md`}>
+                <Text>
+                  No Resualts Please try diffrent query <TouchableOpacity>Reset</TouchableOpacity>
+                </Text>
+              </View>
             )}
             scrollEnabled={false}
             keyExtractor={(item) => item.id.toString()}
