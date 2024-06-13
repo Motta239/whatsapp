@@ -5,7 +5,7 @@ This is a React Native WhatsApp clone using [Clerk](https://clerk.com/?utm_sourc
 Additional features:
 
 - [Expo Router](https://docs.expo.dev/routing/introduction/) file-based navigation
-- [SMS OTP](https://clerk.com/docs/custom-flows/email-sms-otp?utm_source=sponsorship&utm_medium=github&utm_campaign=simong&utm_content=rn-whatsapp) Auth With Supabase
+- [SMS OTP](https://clerk.com/docs/custom-flows/email-sms-otp?utm_source=sponsorship&utm_medium=github&utm_campaign=simong&utm_content=rn-whatsapp) Auth, database and storage With Supabase
 - [Reanimated](https://docs.swmansion.com/react-native-reanimated/) 3 for animations
 - [Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/) for gestures
 - [Styling](https://github.com/jaredh159/tailwind-react-native-classnames) with NativeWind Css and twrnc
