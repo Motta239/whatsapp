@@ -28,14 +28,17 @@ First, ensure you have Node.js and npm installed on your machine. Then, follow t
    ```sh
    git clone https://github.com/Motta239/whatsapp.git
    cd whatsapp
+   
 2. Install the dependencies:
     ```sh
     npm install
- 3. Create an .env file in the root directory of the project and add your Supabase keys with Expo prefix:
-      ```sh
+    
+3. Create an .env file in the root directory of the project and add your Supabase keys with Expo prefix:
+    ```sh
     EXPO_SUPABASE_URL=your-supabase-url
     EXPO_SUPABASE_ANON_KEY=your-supabase-anon-key
     EXPO_SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
-4.To run the app on an iOS simulator:
-```sh
+
+4. To run the app on an iOS simulator:
+   ```sh
     npx expo run:ios
