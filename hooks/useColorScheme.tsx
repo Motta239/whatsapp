@@ -23,10 +23,6 @@ function useColorScheme() {
   }
 
   return {
-    chatImage:
-      colorScheme === 'dark'
-        ? require('/Users/motiyosef/APPS/verta/assets/images/darkWhatsappImage.png')
-        : require('/Users/motiyosef/APPS/verta/assets/images/whatsappimage.jpeg'),
     colorScheme: colorScheme ?? 'light',
     tabIcon: colorScheme === 'dark' ? '#25D366' : '#027a0c',
     textColor: colorScheme === 'dark' ? COLORS.light.grey5 : COLORS.dark.grey6,

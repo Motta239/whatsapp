@@ -38,7 +38,7 @@ export const useLiveChatUpdates = () => {
           setChats((prevChats) => {
             const updatedChat = payload.new as ChatProps;
             const existingChatIndex = prevChats.findIndex((chat) => chat.id === updatedChat.id);
-            console.log(payload);
+
             let updatedChats;
             if (existingChatIndex !== -1) {
               // Update existing chat in the state

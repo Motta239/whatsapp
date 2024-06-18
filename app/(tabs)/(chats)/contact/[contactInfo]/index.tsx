@@ -58,9 +58,7 @@ const ContactInfo = () => {
             color: textColor,
           },
           headerRight: () => (
-            <TouchableOpacity
-              style={tw`flex-row items-center rounded-xl`}
-              onPress={() => console.log('Edit pressed')}>
+            <TouchableOpacity style={tw`flex-row items-center rounded-xl`} onPress={() => {}}>
               <Text style={[tw`mr-2`, { color: textColor }]}>Edit</Text>
             </TouchableOpacity>
           ),
@@ -114,7 +112,7 @@ const ContactInfo = () => {
             </Text>
             <TouchableOpacity
               style={tw`mt-3 flex-row items-center justify-center bg-[${sectionBackground}] rounded-xl p-3`}
-              onPress={() => console.log('Create group pressed')}>
+              onPress={() => {}}>
               <Ionicons name="add-circle-outline" size={24} color={textColor} style={tw`mr-2`} />
               <Text style={[tw`text-base`, { color: textColor }]}>
                 Create group with {contact?.name}

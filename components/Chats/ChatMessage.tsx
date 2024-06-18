@@ -28,7 +28,6 @@ const ChatMessage = forwardRef<Swipeable, ChatMessageProps>(
         ...message,
         reaction: reaction,
       });
-      console.log(updated ? 'Message updated' : 'Failed to update message');
     };
 
     const handleSwipeableOpen = () => {

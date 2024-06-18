@@ -256,7 +256,7 @@ export default function Updates() {
                 <Ionicons name="camera" size={23} color={textColor} />
               </TouchableOpacity>
               <TouchableOpacity
-                style={tw`rounded-fullbg-gray-300 h-8 w-8 items-center justify-center bg-opacity-20 `}
+                style={tw`h-8 w-8 items-center justify-center rounded-full bg-gray-300 bg-opacity-20 `}
                 onPress={() => {}}>
                 <Ionicons name="pencil" size={20} color={textColor} />
               </TouchableOpacity>

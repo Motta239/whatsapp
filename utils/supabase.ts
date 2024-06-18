@@ -42,7 +42,7 @@ export async function signInWithEmail(email: string, password: string): Promise<
     email,
     password,
   });
-  console.log(user, session, error);
+
   return { user, session, error };
 }
 
@@ -118,7 +118,6 @@ export async function sendOTP(phone: string): Promise<{ error?: AuthError | null
 }
 
 export async function fetchData<T>(table: string): Promise<Partial<ChatProps>[]> {
-  console.log('fetching data');
   const { data, error } = await supabase
     .from(table)
     .select('name,id,avatar,lastMessage')
@@ -131,7 +130,6 @@ export async function fetchData<T>(table: string): Promise<Partial<ChatProps>[]>
 }
 
 export const useGetChatData = () => {
-  console.log('fetching data');
   return useQuery<Partial<ChatProps>[], Error>({
     queryKey: ['chats'],
     queryFn: () => fetchData<ChatProps>('chats'),
